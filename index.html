@@ -12,7 +12,7 @@
 			$(document).ready(function() {
 				$.getJSON("concerts.json", function(result) {
 					$.each(result, function(i, field) {
-						$("div").appen(field + " ");
+						$("div").append(field + " ");
 					});
 				});
 			});
