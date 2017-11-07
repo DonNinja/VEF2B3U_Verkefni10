@@ -10,7 +10,19 @@
 		<script type="text/javascript">
 			"use strict";
 			$.getJSON( "concerts.json", function(data) {
-				console.log(data);
+				var concertEvents = [];
+
+				for (var i = 0; i < data.results.length; i++) {
+					concertEvents.push({
+						nafn:data.results[i].eventDateName,
+						stage:data.results[i].name,
+						date:data.results[i].dateOfShow,
+						groupname:data.results[i].userGroupName,
+						hallname:data.results[i].eventHallName,
+						img:data.results[i].imageSource
+					});
+					console.log(concertEvents);
+				}
 			});
 		</script>
 </body>
