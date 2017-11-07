@@ -3,20 +3,19 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="specific.css">
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"></head>
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
 </head>
 <body>
-	<div>jkæjlkjælkjælkj</div>
+		<script src="jquery.js"></script>
 		<script type="text/javascript">
 			"use strict";
-			$.ajax({
-			  'url': 'http://apis.is/concerts',
-			  'type': 'GET',
-			  'dataType': 'json',
-			  'success': function(response) {
-			    console.log(response);
-			  }
-			});
+			$(document).ready(function() {
+				$.getJSON("concerts.json", function(result) {
+					$.each(result, function(i, field) {
+						$("div").appen(field + " ");
+					})
+				})
+			})
 		</script>
 </body>
 </html>
