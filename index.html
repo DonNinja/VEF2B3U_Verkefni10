@@ -9,12 +9,8 @@
 		<script src="jquery.js"></script>
 		<script type="text/javascript">
 			"use strict";
-			$(document).ready(function() {
-				$.getJSON("concerts.json", function(result) {
-					$.each(result, function(i, field) {
-						$("div").append(field + " ");
-					});
-				});
+			$.getJSON( "concerts.json", function(data) {
+				console.log(data);
 			});
 		</script>
 </body>
