@@ -1,3 +1,16 @@
-div {
+.boddi {
 	margin: 6em;
+}
+p {
+	text-align: center;
+}
+body {
+	background: url(background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.hedd {
+	width: 100%;
+	background-color: black;
+	height: 5em;
 }
