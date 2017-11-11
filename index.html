@@ -9,8 +9,8 @@
 	
 </div>
 <div class="boddi">	
-	<div class="pure-g">
-		
+	<div class="pure-g" id="af">
+		<p class="pure-1-3">test</p>
 	</div>
 </div>
 <body>
@@ -19,10 +19,11 @@
 			"use strict";
 			$.getJSON( "concerts.json", function(data) {
 				let concertEvents = [];
-				let htmlElements = "";
+				var htmlElements = '';
 
 				for (var i = 0; i < data.results.length; i++) {
-					concertEvents.push({
+					concertEvents.push
+					({
 						nafn:data.results[i].eventDateName,
 						stage:data.results[i].name,
 						date:data.results[i].dateOfShow,
@@ -30,7 +31,11 @@
 						hallname:data.results[i].eventHallName,
 						img:data.results[i].imageSource
 					});
-					htmlElements += '';
+				}
+
+				for (var j = 0; j < concertEvents.length; j++) {
+					htmlElements += '<p>' + concertEvents[i].nafn + ' ' + concertEvents[i].stage + ' ' + concertEvents[i].date + ' ' + concertEvents[i].groupname + ' ' + concertEvents[i].hallname + ' ' + concertEvents[i].img  + '</p>';
+					document.getElementById('af').innerHTML = htmlElements;
 				}
 			});
 		</script>

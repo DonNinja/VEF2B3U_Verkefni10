@@ -3,6 +3,8 @@
 }
 p {
 	text-align: center;
+	background-color: black;
+	color: white;
 }
 body {
 	background: url(background.jpg);
