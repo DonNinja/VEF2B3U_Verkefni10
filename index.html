@@ -4,13 +4,13 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="specific.css">
 	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+	<meta charset="utf-8">
 </head>
 <div class="hedd">
-	
+	<img src="">
 </div>
 <div class="boddi">	
 	<div class="pure-g" id="af">
-		<p class="pure-1-3">test</p>
 	</div>
 </div>
 <body>
@@ -33,10 +33,17 @@
 					});
 				}
 
-				/*for (var j = 0; j < concertEvents.length; j++) {
-					htmlElements += '<p>' + concertEvents[i].nafn + ' ' + concertEvents[i].stage + ' ' + concertEvents[i].date + ' ' + concertEvents[i].groupname + ' ' + concertEvents[i].hallname + ' ' + concertEvents[i].img  + '</p>';
+				for (var j = 0; j < data.results.length; j++) {
+					htmlElements += '<span class="pure-u-1-3" id="third"> <p> Event date name: ' + concertEvents[j].nafn + '</p><p> Nafn:' + concertEvents[j].stage + '</p><p> Dagsetning: ' + concertEvents[j].date + '</p><p> Group nafn: ' + concertEvents[j].groupname + '</p><p> Staðsetning: ' + concertEvents[j].hallname + '</p><p><img src="' + concertEvents[j].img  + '"></p> </span>';
+					/*console.log(concertEvents[j].nafn);
+					console.log(concertEvents[j].stage);
+					console.log(concertEvents[j].date);
+					console.log(concertEvents[j].groupname);
+					console.log(concertEvents[j].hallname);
+					console.log(concertEvents[j].img);*/
+
 					document.getElementById('af').innerHTML = htmlElements;
-				}*/
+				}
 			});
 		</script>
 </body>

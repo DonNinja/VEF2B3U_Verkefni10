@@ -1,7 +1,7 @@
 .boddi {
 	margin: 6em;
 }
-p {
+span {
 	text-align: center;
 	background-color: black;
 	color: white;
@@ -15,4 +15,7 @@ body {
 	width: 100%;
 	background-color: black;
 	height: 5em;
+}
+#third {
+	margin-bottom: 1em;
 }
