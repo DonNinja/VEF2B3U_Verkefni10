@@ -1,5 +1,5 @@
 .boddi {
-	margin: 6em;
+	margin: 4em;
 }
 span {
 	text-align: center;
@@ -16,9 +16,10 @@ body {
 	background-color: black;
 	height: 5em;
 	margin: 0 auto;
+	text-align: center;
 }
 #third {
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 	width: 25%;
 	margin-right: 2em;
 	margin-left: 2em;
@@ -27,7 +28,8 @@ body {
 	justify-content: center;
 }
 input {
+	margin-top: 1.25em;
 	width: 50%;
-	height: 50%;
+	height: 25%;
 	font-size: 200%;
 }

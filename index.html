@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 </head>
 <div class="hedd">
-	
+	<input type="text" placeholder="filter by search" id="filter-search" />
 </div>
 <div class="boddi">	
 	<div class="pure-g" id="af">
@@ -15,6 +15,7 @@
 </div>
 <body>
 		<script src="jquery.js"></script>
+		<script src="moment-with-locales.js"></script>
 		<script type="text/javascript">
 			"use strict";
 			$.getJSON( "concerts.json", function(data) {
@@ -34,7 +35,10 @@
 				}
 
 				for (var j = 0; j < data.results.length; j++) {
-					htmlElements += '<span class="pure-u-1-3" id="third"> <p> Event date name: ' + concertEvents[j].nafn + '</p><p> Nafn:' + concertEvents[j].stage + '</p><p> Dagsetning: ' + concertEvents[j].date + '</p><p> Group nafn: ' + concertEvents[j].groupname + '</p><p> Staðsetning: ' + concertEvents[j].hallname + '</p><p><img src="' + concertEvents[j].img  + '"></p> </span>';
+					moment.locale("is");
+					var thing = concertEvents[j].date;
+
+					htmlElements += '<span class="pure-u-1-3" id="third"> <p> Event date name: ' + concertEvents[j].nafn + '</p><p> Nafn:' + concertEvents[j].stage + '</p><p> Dagsetning: ' + moment(thing).format("LLL") + '</p><p> Group nafn: ' + concertEvents[j].groupname + '</p><p> Staðsetning: ' + concertEvents[j].hallname + '</p><p><img src="' + concertEvents[j].img  + '"></p></span>';
 
 					document.getElementById('af').innerHTML = htmlElements;
 				}
