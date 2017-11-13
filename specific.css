@@ -12,6 +12,7 @@ body {
 	background-size: cover;
 }
 .hedd {
+	line-height: 5em;
 	width: 100%;
 	background-color: black;
 	height: 5em;
@@ -28,7 +29,6 @@ body {
 	justify-content: center;
 }
 input {
-	margin-top: 1.25em;
 	width: 50%;
 	height: 25%;
 	font-size: 200%;

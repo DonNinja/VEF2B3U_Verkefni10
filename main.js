@@ -26,7 +26,7 @@ $.getJSON( "concerts.json", function(data) {
 			});
 
 			(function() {
-				var $spans = $('#af span');
+				var $spans = $('#third');
 				var $search = $('#filter-search');
 				var cache = [];
 
