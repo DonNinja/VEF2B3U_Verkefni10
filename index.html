@@ -6,43 +6,17 @@
 	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
 	<meta charset="utf-8">
 </head>
-<div class="hedd">
+<div class="hedd" id="hed">
 	<input type="text" placeholder="filter by search" id="filter-search" />
 </div>
 <div class="boddi">	
 	<div class="pure-g" id="af">
+	
 	</div>
 </div>
 <body>
 		<script src="jquery.js"></script>
 		<script src="moment-with-locales.js"></script>
-		<script type="text/javascript">
-			"use strict";
-			$.getJSON( "concerts.json", function(data) {
-				let concertEvents = [];
-				var htmlElements = '';
-
-				for (var i = 0; i < data.results.length; i++) {
-					concertEvents.push
-					({
-						nafn:data.results[i].eventDateName,
-						stage:data.results[i].name,
-						date:data.results[i].dateOfShow,
-						groupname:data.results[i].userGroupName,
-						hallname:data.results[i].eventHallName,
-						img:data.results[i].imageSource
-					});
-				}
-
-				for (var j = 0; j < data.results.length; j++) {
-					moment.locale("is");
-					var thing = concertEvents[j].date;
-
-					htmlElements += '<span class="pure-u-1-3" id="third"> <p> Event date name: ' + concertEvents[j].nafn + '</p><p> Nafn:' + concertEvents[j].stage + '</p><p> Dagsetning: ' + moment(thing).format("LLL") + '</p><p> Group nafn: ' + concertEvents[j].groupname + '</p><p> Staðsetning: ' + concertEvents[j].hallname + '</p><p><img src="' + concertEvents[j].img  + '"></p></span>';
-
-					document.getElementById('af').innerHTML = htmlElements;
-				}
-			});
-		</script>
+		<script src="main.js"></script>
 </body>
 </html>
